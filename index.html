@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kauppalista</title>
+    <link rel="stylesheet" href="../Kauppalista/css/styles.css">
+</head>
+<body>
+
+    <h1>Kauppalista</h1>
+    <p>Tämä on JavaScript-kurssin harjoitustehtävä kauppalista.</p>
+
+    <div id="valinnat" style="display:block;">
+    <p>Valitse haluttu tuotekategoria ja tuotteet alta</p>
+    <select name="mySelect" id="mySelect" onchange="showUserChoice()">
+        <option value="hedelmät">Hedelmät</option>      
+        <option value="vihannekset">Vihannekset</option>
+        <option value="leivät">Leivät</option>        
+        <option value="maitotuotteet">Maitotuotteet</option>
+        <option value="ruuat">Ruuat</option>
+        <option value="voit">Voit/Juustot</option>         
+        <option value="murot">Murot/Myslit yms.</option>
+        <option value="pastat">Pastat</option>
+        <option value="pakasteet">Pakasteet</option>        
+        <option value="muut">Muut</option>
+    </select>
+
+    <div id="kategoriaLista">
+    <!-- Tähän tulee yllä valitun tuotekategorian vaihtoehdot -->
+    </div>
+
+    <div id="muuta">
+    <p>Mitä muuta?
+        <label for="textfield"></label>
+        <input type="text" name="textfield" id="textfield">
+        <p id="error-message" style="color: red; display: none;">Syötteen tulee olla vähintään kolme merkkiä pitkä.</p>
+        <br>
+    </p>
+    </div>
+
+    <h2>Valitut tuotteet</h2>
+    <div id="valitutTuotteet">
+    <!-- Tähän tulee yllä valittujen tuotteiden lista -->
+    </div>
+
+    </div>
+    <br>
+
+    <input type="button" onclick="piilotaValinnat()" name="piilotaValinnat" id="piilotaValinnat" value="Piilota valinnat">
+    <input type="button" onclick="naytaValinnat()" name="naytaValinnat" id="naytaValinnat" value="Näytä valinnat">
+
+    <input type="button" onclick="naytaOstoslista()" name="naytaOstoslista" id="naytaOstoslista" value="Näytä Ostoslista">
+
+    <div id="kauppaan" style="display: none;">
+        <h2>Ostoslista</h2>
+        <div id="ostoslista">
+        <!-- Tähän tulee valitut tuotteet ja listaa voidaan muokata kaupassa -->
+        </div>
+
+        <p><input type="button" onclick="tyhjenna()" name="tyhjenna" id="tyhjenna" value="Tyhjennä kaikki">
+        <input type="button" onclick="tyhjennaviivatut()" name="tyhjennaviivatut" id="tyhjennaviivatut" value="Tyhjennä yliviivatut"></p>
+        <p>
+            Tuotteita jäljellä: 
+            <input type="button" onclick="laskeJaNaytaJaljellaOlevatTuotteet()" name="lasketuotteet" id="lasketuotteet" value="Laske jäljellä olevat tuotteet">
+            <span id="jäljelläOlevatTuotteet"></span>
+        </p>
+
+    </div>
+
+
+
+    <script src="../Kauppalista/js/scripts.js"></script>
+</body>
+</html>
+
