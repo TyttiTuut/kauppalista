@@ -432,6 +432,19 @@ function laskeJaNaytaJaljellaOlevatTuotteet() {
     jäljelläOlevatTuotteetElementti.textContent = laskuri;
 }
 
+function naytaOstoslista() {
+    var ostoslistaDiv = document.getElementById("kauppaan");
+    ostoslistaDiv.style.display = "block";
+}
+
+function piilotaValinnat() {
+    var valinnatDiv = document.getElementById("valinnat");
+    valinnatDiv.style.display = "none";
+}
+function naytaValinnat() {
+    var valinnatDiv = document.getElementById("valinnat");
+    valinnatDiv.style.display = "block";
+}
 
 function tallennaOstoslista() {
     // Muunna ostoslistan objekti JSON-muotoon
@@ -453,18 +466,3 @@ function lataaOstoslista() {
     // Muunna JSON-muotoinen ostoslista takaisin objektiksi
     return JSON.parse(ostoslistaJSON);
 }
-
-function naytaOstoslista() {
-    var ostoslistaDiv = document.getElementById("kauppaan");
-    ostoslistaDiv.style.display = "block";
-}
-
-function piilotaValinnat() {
-    var valinnatDiv = document.getElementById("valinnat");
-    valinnatDiv.style.display = "none";
-}
-function naytaValinnat() {
-    var valinnatDiv = document.getElementById("valinnat");
-    valinnatDiv.style.display = "block";
-}
-
