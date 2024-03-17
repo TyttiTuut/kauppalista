@@ -1,0 +1,114 @@
+
+h1, h2 {
+    font-weight: bold; 
+    color: #2c3e50; 
+    background-color: #ecf0f1; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+h1 {
+    font-size: 24px; 
+}
+
+h2 {
+    font-size: 20px; 
+}
+
+
+#ostoslista {
+    border-radius: 10px; 
+    background-color: #96c5fd; 
+    padding: 20px; 
+    border: 2px solid #85b0e6; 
+}
+#valitutTuotteet {
+    border-radius: 10px; 
+    background-color: #fdfd96; 
+    padding: 20px; 
+    border: 2px solid #e6e685; 
+}
+
+#piilotaValinnat {
+    background-color: #fdfd96; 
+    color: black; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    border: 2px solid black 
+    cursor: pointer;
+}
+
+#piilotaValinnat:hover {
+    background-color: #e6e685; 
+}
+
+#naytaValinnat {
+    background-color: #fdfd96; 
+    color: black; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    border: 2px solid black 
+    cursor: pointer;
+}
+
+#naytaValinnat:hover {
+    background-color: #e6e685; 
+}
+
+#naytaOstoslista {
+    background-color: #96c5fd; 
+    color: black; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    border: 2px solid black 
+    cursor: pointer;
+}
+
+#naytaOstoslista:hover {
+    background-color: #85b0e6; 
+}
+
+.yliviivattu {
+    text-decoration: line-through;
+    color: orange; 
+}
+
+#tyhjenna {
+    background-color: #96c5fd; 
+    color: black; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    border: 2px solid black 
+    cursor: pointer;
+}
+#tyhjenna:hover {
+    background-color: #e6e685; 
+}
+#tyhjennaviivatut {
+    background-color: #96c5fd; 
+    color: black; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    border: 2px solid black 
+    cursor: pointer;
+}
+#tyhjennaviivatut:hover {
+    background-color: #e6e685; 
+}
+#lasketuotteet {
+    background-color: #fdfd96; 
+    color: black; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    border: 2px solid black 
+    cursor: pointer;
+}
+
+#lasketuotteet:hover {
+    background-color: #e6e685; 
+}
+#jäljelläOlevatTuotteet {
+    font-weight: bold;
+    color: blue; 
+    font-size: 24px;
+}
