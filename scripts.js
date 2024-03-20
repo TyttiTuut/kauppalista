@@ -461,6 +461,9 @@ function tyhjennaviivatut() {
             var tuoteNimi = tuoteElementti.textContent;
             delete valitutTuotteet[tuoteNimi];
         }
+        var yliviivatutTuotteetElementti = document.getElementById("yliviivatutTuotteet");
+        // Tyhjennetään yliviivatut tuotteet
+        yliviivatutTuotteetElementti.innerHTML = "";
     }
     
     // Tallenetaan muutokset local storageen
