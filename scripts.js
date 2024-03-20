@@ -1,6 +1,6 @@
-
 window.onload = function() {
-    lataaOstoslista();
+    valitutTuotteet = lataaOstoslista();
+    paivitaValitutTuotteet();
 };
 
 // Funktio, joka käsittelee pudotusvalikon muutokset
@@ -464,6 +464,6 @@ function lataaOstoslista() {
         return {};
     }
 
-    // Muunna JSON-muotoinen ostoslista takaisin objektiksi
+    // Muunna JSON-muotoinen ostoslista takaisin objektiksi ja palauta se
     return JSON.parse(ostoslistaJSON);
 }
