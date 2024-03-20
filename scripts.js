@@ -390,6 +390,9 @@ function tyhjenna() {
     // Tyhjennetään valitutTuotteet-objekti
     valitutTuotteet = {};
 
+    // Tallennetaan Local-storage   
+    tallennaOstoslista();
+
     // Poistetaan valinta kaikista tuotekategorialistauksista
     var kaikkiCheckboxit = document.querySelectorAll('input[type="checkbox"]');
     kaikkiCheckboxit.forEach(function(checkbox) {
@@ -413,8 +416,15 @@ function tyhjennaviivatut() {
             ostoslistaElementti.removeChild(tuoteElementti);
             // Vähennetään laskuria yhdellä, koska poistimme yhden tuotteen
             i--;
+            
+            // Poista vastaava tuote myös valituista tuotteista
+            var tuoteNimi = tuoteElementti.textContent;
+            delete valitutTuotteet[tuoteNimi];
         }
     }
+    
+    // Tallenna muutokset paikalliseen varastoon
+    tallennaOstoslista();
 }
 
 function laskeJaNaytaJaljellaOlevatTuotteet() {
