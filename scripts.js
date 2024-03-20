@@ -327,7 +327,6 @@ document.getElementById("textfield").addEventListener("keydown", function(event)
 
 function paivitaValitutTuotteet() {
     var valitutTuotteetElementti = document.getElementById("valitutTuotteet");
-    var yliviivatutTuotteetElementti = document.getElementById("yliviivatutTuotteet");
     var ostoslistaElementti = document.getElementById("ostoslista");
     var tekstikentta = document.getElementById("textfield");
 
@@ -337,7 +336,7 @@ function paivitaValitutTuotteet() {
         // Lisätään syötetty tuote valittujen tuotteiden listaan
         valitutTuotteet[syotettyTuote] = true;
         // Lisätään syötetty tuote ostoslistaan
-        lisaaOstoslistaan(syotettyTuote);
+        lisaaOstoslistaan(syotettyTuote, ostoslistaElementti); // Lisää ostoslistaElementti parametri
     }
 
     // Tallenna ostoslista Local Storageen
@@ -346,7 +345,7 @@ function paivitaValitutTuotteet() {
     // Tyhjennetään listat ennen päivitystä
     valitutTuotteetElementti.innerHTML = "";
     ostoslistaElementti.innerHTML = "";
-    yliviivatutTuotteetElementti.innerHTML = "";
+
 
     // Lisätään valitut tuotteet listaan ja ostoslistaan
     for (var tuote in valitutTuotteet) {
@@ -357,68 +356,58 @@ function paivitaValitutTuotteet() {
         valitutTuotteetElementti.appendChild(uusiTuoteElementti);
 
         // Lisätään tuote ostoslistaan
-        lisaaOstoslistaan(tuote);
-    }
-
-    // Lisätään yliviivatut tuotteet listaan
-    for (var i = 0; i < yliviivatutTuotteet.length; i++) {
-        var uusiTuoteElementti = document.createElement("p");
-        uusiTuoteElementti.textContent = yliviivatutTuotteet[i];
-        uusiTuoteElementti.classList.add("yliviivattu");
-
-        // Lisätään mahdollisuus poistaa yliviivaus tuotteesta
-        uusiTuoteElementti.addEventListener("click", function() {
-            this.classList.toggle("yliviivattu");
-            tallennaOstoslista(); // Tallennetaan muutokset
-        });
-
-        yliviivatutTuotteetElementti.appendChild(uusiTuoteElementti);
+        lisaaOstoslistaan(tuote, ostoslistaElementti); // Lisää ostoslistaElementti parametri
     }
 
     // Tyhjennetään tekstikenttä syötön jälkeen
     tekstikentta.value = "";
 }
 
-
-
-function lisaaOstoslistaan(tuoteNimi) {
-    var ostoslistaElementti = document.getElementById("ostoslista");
-
+function lisaaOstoslistaan(tuoteNimi, ostoslistaElementti) { // Lisää ostoslistaElementti parametri
     var uusiTuoteElementti = document.createElement("p");
     uusiTuoteElementti.textContent = tuoteNimi;
 
-    // Lisätään mahdollisuus yliviivata tuote ostoslistalla
+    // Lisätään tapahtumankäsittelijä yliviivauksen lisäämiselle ja poistamiselle
     uusiTuoteElementti.addEventListener("click", function() {
-        if (uusiTuoteElementti.classList.contains("yliviivattu")) {
-            // Poistegtaan yliviivaus-luokka, lisätään tuote ostoslistalle ja poisttetaan se yliviivatuista
-            uusiTuoteElementti.classList.remove("yliviivattu");
-            poistaTuoteYliviivatuista(tuoteNimi);
+        if (this.classList.contains("yliviivattu")) {
+            // Poista yliviivaus
+            this.classList.remove("yliviivattu");
         } else {
-            // Lisää yliviivaus-luokka, poistetaan tuote ostoslistalta ja lisätään se yliviivatuille
-            uusiTuoteElementti.classList.add("yliviivattu");
-            lisaaTuoteYliviivattuihin(tuoteNimi);
+            // Lisää yliviivaus
+            this.classList.add("yliviivattu");
         }
-
-        // Tallenna ostoslistan muutokset Local storageen
-        tallennaOstoslista();
+        // Tallenna yliviivatut tuotteet Local Storageen
+        tallennaYliviivatutTuotteet();
     });
 
+    // Tarkistetaan, onko tuote yliviivattu ja lisätään se ostoslistalle
+    if (yliviivatutTuotteet.includes(tuoteNimi)) {
+        uusiTuoteElementti.classList.add("yliviivattu");
+    }
     ostoslistaElementti.appendChild(uusiTuoteElementti);
 }
 
-function poistaTuoteYliviivatuista(tuoteNimi) {
-    var indeksi = yliviivatutTuotteet.indexOf(tuoteNimi);
-    if (indeksi !== -1) {
-        yliviivatutTuotteet.splice(indeksi, 1);
-    }
-}
+    
 
-function lisaaTuoteYliviivattuihin(tuoteNimi) {
-    if (yliviivatutTuotteet.indexOf(tuoteNimi) === -1) {
-        yliviivatutTuotteet.push(tuoteNimi);
-    }
-}
 
+
+
+function tallennaYliviivatutTuotteet() {
+    var ostoslistaElementti = document.getElementById("ostoslista");
+    var yliviivatutTuotteet = [];
+
+    // Haetaan yliviivatut tuotteet ja tallennetaan ne taulukkoon
+    var tuoteElementit = ostoslistaElementti.getElementsByTagName("p");
+    for (var i = 0; i < tuoteElementit.length; i++) {
+        if (tuoteElementit[i].classList.contains("yliviivattu")) {
+            yliviivatutTuotteet.push(tuoteElementit[i].textContent);
+        }
+    }
+
+    // Muunna yliviivatut tuotteet JSON-muotoon ja tallenna ne Local Storageen
+    var yliviivatutTuotteetJSON = JSON.stringify(yliviivatutTuotteet);
+    localStorage.setItem('yliviivatutTuotteet', yliviivatutTuotteetJSON);
+}
 
 
 function tyhjenna() {
