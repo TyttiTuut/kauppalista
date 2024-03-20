@@ -1,3 +1,4 @@
+
 window.onload = function() {
     var lataus = lataaOstoslista();
     valitutTuotteet = lataus.ostoslista;
