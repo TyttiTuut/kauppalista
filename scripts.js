@@ -39,7 +39,7 @@ function changeKategorialista(selectedKategoria) {
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="hedelmät" value="Viinirypäle" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="hedelmät" value="Viinirypäle" id="CheckboxGroup1_3"> 
                     Viinirypäle
                 </label>
             `;
@@ -47,32 +47,32 @@ function changeKategorialista(selectedKategoria) {
         case "vihannekset":
             listaElement.innerHTML += `
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="vihannekset" value="Tomaatti" id="CheckboxGroup1_0" title="Actions">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="vihannekset" value="Tomaatti" id="CheckboxGroup2_0" title="Actions">
                     Tomaatti 
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="vihannekset" value="Kurkku" id="CheckboxGroup1_1">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="vihannekset" value="Kurkku" id="CheckboxGroup2_1">
                     Kurkku
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="vihannekset" value="Paprika" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="vihannekset" value="Paprika" id="CheckboxGroup2_2"> 
                     Paprika
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="vihannekset" value="Jäävuorisalaatti" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="vihannekset" value="Jäävuorisalaatti" id="CheckboxGroup2_3"> 
                     Jäävuorisalaatti
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="vihannekset" value="Ruukkusalaatti" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="vihannekset" value="Ruukkusalaatti" id="CheckboxGroup2_4"> 
                     Ruukkusalaatti
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="vihannekset" value="Peruna" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="vihannekset" value="Peruna" id="CheckboxGroup2_5"> 
                     Peruna
                 </label>                                    
             `;
@@ -80,17 +80,17 @@ function changeKategorialista(selectedKategoria) {
         case "leivät":
             listaElement.innerHTML += `
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="leivät" value="Tummaleipä" id="CheckboxGroup1_0" title="Actions">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="leivät" value="Tummaleipä" id="CheckboxGroup3_0" title="Actions">
                     Tumma leipä 
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="leivät" value="Vaalealeipä" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="leivät" value="Vaalealeipä" id="CheckboxGroup3_1"> 
                     Vaalea leipä
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="leivät" value="Paistopiste" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="leivät" value="Paistopiste" id="CheckboxGroup3_2"> 
                     Paistopiste
                 </label>
             `;
@@ -98,32 +98,32 @@ function changeKategorialista(selectedKategoria) {
         case "maitotuotteet":
             listaElement.innerHTML += `
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="maitotuotteet" value="Rasvaton maito" id="CheckboxGroup1_0" title="Actions">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="maitotuotteet" value="Rasvaton maito" id="CheckboxGroup4_0" title="Actions">
                     Rasvaton maito 
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="maitotuotteet" value="Sininen maito" id="CheckboxGroup1_1">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="maitotuotteet" value="Sininen maito" id="CheckboxGroup4_1">
                     Sininen maito
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="maitotuotteet" value="Rahka" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="maitotuotteet" value="Rahka" id="CheckboxGroup4_2"> 
                     Rahka
                 </label>
                 <br>
                 <label>
-                <input onchange="lisaaTuote(this)" type="checkbox" name="maitotuotteet" value="Ruokakerma" id="CheckboxGroup1_2"> 
+                <input onchange="lisaaTuote(this)" type="checkbox" name="maitotuotteet" value="Ruokakerma" id="CheckboxGroup4_3"> 
                 Ruokakerma
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="maitotuotteet" value="Makurahka" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="maitotuotteet" value="Makurahka" id="CheckboxGroup4_4"> 
                     Makurahka
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="maitotuotteet" value="Jugurtti" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="maitotuotteet" value="Jugurtti" id="CheckboxGroup4_5"> 
                     Jugurtti
                 </label>                                       
             `;
@@ -131,27 +131,27 @@ function changeKategorialista(selectedKategoria) {
         case "ruuat":
             listaElement.innerHTML += `
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="ruuat" value="Jauheliha" id="CheckboxGroup1_0" title="Actions">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="ruuat" value="Jauheliha" id="CheckboxGroup5_0" title="Actions">
                     Jauheliha 
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="ruuat" value="Kanan suikale" id="CheckboxGroup1_1">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="ruuat" value="Kanan suikale" id="CheckboxGroup5_1">
                     Kanan suikale
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="ruuat" value="Kanan pihvi" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="ruuat" value="Kanan pihvi" id="CheckboxGroup5_2"> 
                     Kanan pihvi
                 </label>
                 <br>
                 <label>
-                <input onchange="lisaaTuote(this)" type="checkbox" name="ruuat" value="Possun pihvi" id="CheckboxGroup1_2"> 
+                <input onchange="lisaaTuote(this)" type="checkbox" name="ruuat" value="Possun pihvi" id="CheckboxGroup5_3"> 
                 Possun pihvi
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="ruuat" value="Possun liha" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="ruuat" value="Possun liha" id="CheckboxGroup5_4"> 
                     Possun lihapala
                 </label>                                 
             `;
@@ -159,27 +159,27 @@ function changeKategorialista(selectedKategoria) {
         case "voit":
             listaElement.innerHTML += `
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="voit" value=Voimariini" id="CheckboxGroup1_0" title="Actions">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="voit" value="Voimariini" id="CheckboxGroup6_0" title="Actions">
                     Voimariini 
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="voit" value="Becel" id="CheckboxGroup1_1">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="voit" value="Becel" id="CheckboxGroup6_1">
                     Becel
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="voit" value="Juusto" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="voit" value="Juusto" id="CheckboxGroup6_2"> 
                     Juusto
                 </label>
                 <br>
                 <label>
-                <input onchange="lisaaTuote(this)" type="checkbox" name="voit" value="Raejuusto" id="CheckboxGroup1_2"> 
+                <input onchange="lisaaTuote(this)" type="checkbox" name="voit" value="Raejuusto" id="CheckboxGroup6_3"> 
                 Raejuusto
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="voit" value="Tofu" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="voit" value="Tofu" id="CheckboxGroup6_4"> 
                     Tofu
                 </label>  
             `;
@@ -187,22 +187,22 @@ function changeKategorialista(selectedKategoria) {
         case "murot":
             listaElement.innerHTML += `
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="murot" value="Murot" id="CheckboxGroup1_0" title="Actions">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="murot" value="Murot" id="CheckboxGroup7_0" title="Actions">
                     Murot 
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="murot" value="Mysli" id="CheckboxGroup1_1">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="murot" value="Mysli" id="CheckboxGroup7_1">
                     Mysli
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="murot" value="Kauralese" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="murot" value="Kauralese" id="CheckboxGroup7_2"> 
                     Kaurlese
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="murot" value="Vehnälese" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="murot" value="Vehnälese" id="CheckboxGroup7_3"> 
                     Vehnälese
                 </label>                  
             `;
@@ -210,17 +210,17 @@ function changeKategorialista(selectedKategoria) {
         case "pastat":
             listaElement.innerHTML += `
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="pastat" value="Pasta" id="CheckboxGroup1_0" title="Actions">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="pastat" value="Pasta" id="CheckboxGroup8_0" title="Actions">
                     Pasta 
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="pastat" value="Spagetti" id="CheckboxGroup1_1">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="pastat" value="Spagetti" id="CheckboxGroup8_1">
                     Spagetti
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="pastat" value="Makaroni" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="pastat" value="Makaroni" id="CheckboxGroup8_2"> 
                     Makaroni
                 </label>
                   
@@ -229,27 +229,27 @@ function changeKategorialista(selectedKategoria) {
         case "pakasteet":
             listaElement.innerHTML += `
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="pakasteet" value="Pakastevihannekset" id="CheckboxGroup1_0" title="Actions">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="pakasteet" value="Pakastevihannekset" id="CheckboxGroup9_0" title="Actions">
                     Pakastevihannekset 
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="pakasteet" value="Pakasteherneet" id="CheckboxGroup1_1">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="pakasteet" value="Pakasteherneet" id="CheckboxGroup9_1">
                     Pakasteherneet
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="pakasteet" value="Pakastewok" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="pakasteet" value="Pakastewok" id="CheckboxGroup9_2"> 
                     Wok-vihannekset
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="pakasteet" value="Ranskalaiset" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="pakasteet" value="Ranskalaiset" id="CheckboxGroup9_3"> 
                     Ranskalaiset
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="pakasteet" value=Pakastekala" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="pakasteet" value=Pakastekala" id="CheckboxGroup9_4"> 
                     Pakastekala
                 </label>                  
             `;
@@ -257,21 +257,22 @@ function changeKategorialista(selectedKategoria) {
         case "muut":
             listaElement.innerHTML += `
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="muut" value="Kananmunat" id="CheckboxGroup1_0" title="Actions">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="muut" value="Kananmunat" id="CheckboxGroup10_0" title="Actions">
                     Kananmunat 
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="muut" value="Paseerattutomaatti" id="CheckboxGroup1_1">
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="muut" value="Paseerattutomaatti" id="CheckboxGroup10_1">
                     Paseerattutomaatti
                 </label>
                 <br>
                 <label>
-                    <input onchange="lisaaTuote(this)" type="checkbox" name="muut" value="Vichy" id="CheckboxGroup1_2"> 
+                    <input onchange="lisaaTuote(this)" type="checkbox" name="muut" value="Vichy" id="CheckboxGroup10_2"> 
                     Vichy
                 </label>                  
             `;
             break;
+        
         
     }
 }
